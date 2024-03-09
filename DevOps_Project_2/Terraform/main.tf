@@ -15,7 +15,7 @@ data "aws_ami" "amazon-linux" {
 resource "aws_instance" "dev_machine" {
   ami = data.aws_ami.amazon-linux.id
   instance_type = "t3.micro"
-  key_name = "project_key"
+  key_name = "project_key.pem"
 
   tags = {
     Environment = "dev"
